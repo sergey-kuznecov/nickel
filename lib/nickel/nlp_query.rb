@@ -386,7 +386,8 @@ module Nickel
     end
 
     def replace_hyphens
-      nsub!(/--?/, ' through ')
+      #skip replace hyphens for phone numbers
+      nsub!(/(?![0-9]{3})--?(?![0-9]{3})/, ' through ')
     end
 
     def insert_repeats_before_words_indicating_recurrence_lame
