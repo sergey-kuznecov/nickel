@@ -22,7 +22,7 @@ module Nickel
     def query_formatting
       query_str.gsub!(/\n/, '')
       query_str.downcase!
-      remove_unused_punctuation
+      #remove_unused_punctuation
       replace_backslashes
       run_spell_check
       remove_unnecessary_words
